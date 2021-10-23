@@ -12,6 +12,15 @@ const app = Vue.createApp({
             message: "Hola Mundo!!!",
         };
     },
+    methods: {
+        changeQuote() {
+            this.message = "Samuel Espinoza";
+            this.capitalize();
+        },
+        capitalize() {
+            this.quote = this.quote.toUpperCase();
+        },
+    },
 });
 //El uso de {{}} permite insertar codigo JS
 app.mount("#myApp");
